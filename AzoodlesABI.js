@@ -1,5 +1,4 @@
-var ABI = 
-[
+var ABI = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {
     anonymous: false,
@@ -154,6 +153,15 @@ var ABI =
   },
   {
     inputs: [
+      { internalType: "uint256", name: "numberOfTokens", type: "uint256" }
+    ],
+    name: "PreMint",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function"
+  },
+  {
+    inputs: [
       { internalType: "address", name: "to", type: "address" },
       { internalType: "uint256", name: "tokenId", type: "uint256" }
     ],
@@ -174,6 +182,22 @@ var ABI =
     name: "getApproved",
     outputs: [{ internalType: "address", name: "", type: "address" }],
     stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [{ internalType: "address", name: "_WLaddress", type: "address" }],
+    name: "grantWL",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      { internalType: "address[]", name: "_WLaddress", type: "address[]" }
+    ],
+    name: "grantWLBatch",
+    outputs: [],
+    stateMutability: "nonpayable",
     type: "function"
   },
   {
@@ -259,6 +283,13 @@ var ABI =
   {
     inputs: [],
     name: "renounceOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [{ internalType: "address", name: "_WLaddress", type: "address" }],
+    name: "revokeWL",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function"
@@ -375,13 +406,6 @@ var ABI =
     type: "function"
   },
   {
-    inputs: [{ internalType: "uint256", name: "_root", type: "uint256" }],
-    name: "setRoot",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function"
-  },
-  {
     inputs: [
       { internalType: "uint256", name: "_MaxPerTx_free", type: "uint256" }
     ],
@@ -469,6 +493,20 @@ var ABI =
     name: "transferOwnership",
     outputs: [],
     stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [{ internalType: "address", name: "_address", type: "address" }],
+    name: "verifyUser",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [{ internalType: "address", name: "", type: "address" }],
+    name: "whitelistedAddresses",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    stateMutability: "view",
     type: "function"
   },
   {
